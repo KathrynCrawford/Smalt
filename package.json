@@ -1,0 +1,31 @@
+{
+  "name": "smalt",
+  "version": "0.0.1",
+  "description": "CSS Framework",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-sourcemaps": "^1.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KathrynCrawford/Smalt.git"
+  },
+  "author": "Kathryn Crawford",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KathrynCrawford/Smalt/issues"
+  },
+  "homepage": "https://github.com/KathrynCrawford/Smalt#readme"
+}
