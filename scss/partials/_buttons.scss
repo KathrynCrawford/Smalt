@@ -14,9 +14,9 @@ Styleguide 2.0
 
 */
 
-.btn{
+.btn {
   background-color: $primary;
-  border: none;
+  border: 0;
   border-radius: .2rem;
   box-sizing: border-box;
   color: $white;
@@ -24,17 +24,17 @@ Styleguide 2.0
   display: inline-block;
   height: 4.8rem;
   line-height: 4.8rem;
-  max-width: 100%;
-  transition-property: background-color;
-  transition-duration: 200ms;
   margin: 0 auto;
+  max-width: 100%;
   padding: 0 3rem;
   text-align: center;
+  transition-duration: 200ms;
+  transition-property: background-color;
   user-select: none;
   width: auto;
 
   &:link,
-  &:visited{
+  &:visited {
     color: $white;
     text-decoration: none;
   }
@@ -45,62 +45,62 @@ Styleguide 2.0
     color: $white;
   }
 
-  &:focus{
+  &:focus {
     outline: .1rem dotted $gray3;
   }
 
-  &:active{
+  &:active {
     background-color: $primary;
   }
 }
 
-.btn--secondary{
+.btn--secondary {
   background-color: $gray6;
   color: $gray1;
 
   &:link,
-  &:visited{
+  &:visited {
     color: $gray1;
   }
 
   &:focus,
-  &:hover{
+  &:hover {
     background-color: $gray5;
     color: $gray1;
   }
 
-  &:active{
+  &:active {
     color: $gray3;
   }
 }
 
-.btn--link{
+.btn--link {
   background-color: transparent;
   color: $link;
   text-decoration: underline;
 
-  &:link{
+  &:link {
     color: $link;
   }
 
-  &:visited{
+  &:visited {
     color: $link--visited;
   }
 
   &:focus,
-  &:hover{
-    color: $link--hover;
+  &:hover {
     background-color: transparent;
+    color: $link--hover;
   }
 
-  &:active{
-    color: $link--active;
+  &:active {
     background-color: transparent;
+    color: $link--active;
   }
 }
 
-[type=button],
-[type=submit],
-button{
+[type='button'],
+[type='submit'],
+button {
   @extend .btn;
 }
