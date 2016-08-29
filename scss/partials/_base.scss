@@ -1,8 +1,8 @@
 * {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   border: 0;
   font: inherit;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
   text-rendering: geometricPrecision;
@@ -42,7 +42,7 @@ h1,
 h2,
 h3 {
   line-height: 4.8rem;
-  padding: .8rem 0 1.6rem 0;
+  padding: 0.8rem 0 1.6rem 0;
 }
 
 h4,
@@ -88,7 +88,7 @@ code,
 samp,
 kbd {
   background-color: $gray6;
-  color: $primary-dark;
+  color: $primary;
   font-family: $monospace;
   font-size: $font-size--small;
   line-height: 1;
@@ -100,13 +100,13 @@ kbd {
   border-radius: 2px;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: .4rem .4rem .2rem;
+  padding: 0.4rem 0.4rem 0.2rem auto;
 }
 
 pre {
   border-radius: 2px;
   line-height: $line-height;
-  margin: 0 0 2.4rem;
+  margin: 0 0 2.4rem 0;
   overflow-x: auto;
   overflow-y: hidden;
   padding: 1.2rem 1rem;
@@ -164,7 +164,7 @@ hr {
 ol,
 ul {
   margin-left: 2rem;
-  padding: 0 0 2.4rem;
+  padding: 0 0 2.4rem 0;
 }
 
 ol {
@@ -192,7 +192,7 @@ dd {
 }
 
 blockquote {
-  border-left: .3rem solid $gray4;
+  border-left: 0.3rem solid $gray4;
   margin: 0 0 2.4rem 1.2rem;
   padding: 2.4rem 1.2rem;
 
@@ -249,14 +249,14 @@ q {
     content: '"';
   }
 
-  & > q {
+  > q {
     font-style: italic;
   }
 }
 
 dfn,
 abbr {
-  border-bottom: .1rem dotted $gray2;
+  border-bottom: 0.1rem dotted $gray2;
   cursor: default;
 }
 
@@ -274,7 +274,7 @@ table {
 
   th,
   td {
-    padding: 0 .6rem;
+    padding: 0 0.6rem;
   }
 }
 
@@ -299,7 +299,7 @@ textarea,
 select {
   &:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 1000px $white inset !important;
-    -webkit-text-fill-color: $gray1;
     color: $gray1;
+    -webkit-text-fill-color: $gray1;
   }
 }

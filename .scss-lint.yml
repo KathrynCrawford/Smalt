@@ -53,7 +53,7 @@ linters:
   Indentation:
     enabled: true
     allow_non_nested_indentation: false
-    character: tab
+    character: space
     width: 2
   LeadingZero:
     enabled: true
@@ -99,7 +99,7 @@ linters:
     severity: warning
   SelectorFormat:
     enabled: true
-    convention: strict_BEM
+    convention: hyphenated_BEM
   Shorthand:
     enabled: true
     allowed_shorthands: [1, 2, 4]
