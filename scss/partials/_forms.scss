@@ -35,6 +35,31 @@ Markup:
   <input type="submit" value="Cross My Heart" />
 </form>
 
+Alternate markup for labels outside of textfield
+
+<div class="grid">
+  	<div>
+  		<div class="grid grid--medium">
+  			<div class="column--light">
+  				<label for="email" class="textfield__label">Email</label>
+  			</div>
+  			<div class="column--heavy">
+    			<input type="text" id="email" name="email" class="textfield" />
+    		</div>
+    	</div>
+    </div>
+    <div>
+    	<div class="grid">
+    		<div class="column--light">
+    			<label for="password">Password</label>
+    		</div>
+    		<div class="column--heavy">
+    			<input type="password" id="password" name="password"  class="textfield" />
+    		</div>
+			</div>
+  	</div>
+</div>
+
 Styleguide 3.0
 
 */
@@ -141,17 +166,23 @@ select {
   top: 1px;
 }
 
-.textfield input,
-.textfield textarea,
-.select select {
+input,
+textarea,
+select {
   background-color: transparent;
   border: 1px solid $gray3;
   border-radius: 2px;
   box-sizing: border-box;
-  padding: 1.8rem .5rem .6rem;
+  padding: 0.6rem 0.5rem;
   position: relative;
   width: 100%;
   z-index: $z-index-1;
+}
+
+.textfield input,
+.textfield textarea,
+.select select {
+  padding: 1.8rem .5rem .6rem;
 }
 
 .textfield *:focus,

@@ -2,12 +2,13 @@
 //
 // Styleguide
 
-$base-font:       'Avenir', 'Avenir Next','Helvetica Neue','Segoe UI', 'Verdana', sans-serif !default;
-$monospace-font:  'Consolas', 'Monaco', 'Courier New', monospace !default;
+$base-font: 'Montserrat', 'Helvetica Neue', sans-serif !default;
+$secondary-font: 'Roboto', sans-serif !default;
+$monospace-font: 'Roboto Mono', monospace !default;
 
-$heading:         $base-font !default;
-$body:            $base-font !default;
-$monospace:       $monospace-font !default;
+$heading: $base-font !default;
+$body: $secondary-font !default;
+$monospace: $monospace-font !default;
 
 $font-size: 1.6rem !default;
 $line-height: 2.4rem !default;

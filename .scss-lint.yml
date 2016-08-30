@@ -12,7 +12,7 @@ linters:
   ColorVariable:
     enabled: true
   Comment:
-    enabled: true
+    enabled: false
   DebugStatement:
     enabled: true
   DeclarationOrder:
@@ -119,7 +119,7 @@ linters:
   SpaceAfterPropertyName:
     enabled: true
   SpaceAfterVariableColon:
-    enabled: true
+    enabled: false
   SpaceAfterVariableName:
     enabled: true
   SpaceAroundOperator:
