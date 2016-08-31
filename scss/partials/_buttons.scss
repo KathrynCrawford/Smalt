@@ -48,7 +48,7 @@ Styleguide 2.0
 
   &:focus,
   &:hover {
-    background-color: $primary;
+    background-color: $secondary;
     color: $white;
   }
 
@@ -57,7 +57,7 @@ Styleguide 2.0
   }
 
   &:active {
-    background-color: $primary;
+    background-color: $secondary;
   }
 }
 
