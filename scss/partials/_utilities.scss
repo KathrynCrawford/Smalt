@@ -17,45 +17,58 @@ Markup:
 .ta-left                 - text-align: left;
 .ta-center                - text-align: center;
 .ta-right                - text-align: right;
+.sr-only                 - for screen readers only (accessibility)
 
 Styleguide 4.0
 
 */
 
-.disabled{
+.disabled {
   cursor: default;
-  opacity: .5;
+  opacity: 0.5;
   pointer-events: none;
 }
 
-.f-none{
+.f-none {
   float: none;
 }
 
-.f-left{
+.f-left {
   float: left;
 }
 
-.f-right{
+.f-right {
   float: right;
 }
 
-.clearfix{
+.clearfix {
   clear: both;
   overflow: hidden;
 }
 
-.ta-left{
+.ta-left {
   text-align: left;
 }
 
-.ta-center{
+.ta-center {
   text-align: center;
 }
 
-.ta-right{
+.ta-right {
   text-align: right;
 }
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 
 /*
 
@@ -81,30 +94,30 @@ Styleguide 4.1
 */
 
 
-.fs-small{
+.fs-small {
   font-size: $font-size--small;
 }
 
-.fs-base{
+.fs-base {
   font-size: $font-size;
 }
 
-.fs-large{
+.fs-large {
   font-size: $font-size--large;
 }
 
-.fw-light{
+.fw-light {
   font-weight: 300;
 }
 
-.fw-normal{
+.fw-normal {
   font-weight: 400;
 }
 
-.fw-semibold{
+.fw-semibold {
   font-weight: 500;
 }
 
-.fw-bold{
+.fw-bold {
   font-weight: 600;
 }

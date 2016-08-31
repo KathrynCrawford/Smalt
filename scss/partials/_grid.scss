@@ -49,69 +49,67 @@ Styleguide 1.1
 
 // rows
 .grid {
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-}
 
 // columns
-.grid > *{
-  flex: 1;
-  flex-grow: 4;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  * {
+    flex: 1;
+    flex-grow: 4;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
-  &:first-child{
-    margin-left: -1rem;
-  }
+    &:first-child {
+      margin-left: -1rem;
+    }
 
-  &:last-child{
-    margin-right: -1rem;
-  }
+    &:last-child {
+      margin-right: -1rem;
+    }
 
-  &.column--light{
-    flex-grow: 2;
-  }
+    &.column--light {
+      flex-grow: 2;
+    }
 
-  &.column--heavy{
-    flex-grow: 8;
+    &.column--heavy {
+      flex-grow: 8;
+    }
   }
 }
 
 @media (max-width: 599px){
-  .grid--medium{
+  .grid--medium {
     display: block;
-  }
 
-  .grid--medium > *{
-    padding-left: 0;
-    padding-right: 0;
+    * {
+      padding-left: 0;
+      padding-right: 0;
 
-    &:first-child{
-      margin-left: 0;
-    }
+      &:first-child {
+        margin-left: 0;
+      }
 
-    &:last-child{
-      margin-right: 0;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
 
 @media (max-width: 959px){
-  .grid--large{
+  .grid--large {
     display: block;
-  }
 
-  .grid--large > *{
-    padding-left: 0;
-    padding-right: 0;
+    * {
+      padding-left: 0;
+      padding-right: 0;
 
-    &:first-child{
-      margin-left: 0;
-    }
+      &:first-child {
+        margin-left: 0;
+      }
 
-    &:last-child{
-      margin-right: 0;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -132,19 +130,19 @@ Styleguide 1.2
 
 */
 
-.wrapper{
+.wrapper {
   margin: 0 auto;
   max-width: 960px;
   padding: 4.8rem 2rem;
 }
 
-.wrapper-large{
+.wrapper-large {
   margin: 0 auto;
   max-width: 1200px;
   padding: 7.2rem 2rem;
 }
 
-.wrapper-small{
+.wrapper-small {
   margin: 0 auto;
   max-width: 640px;
   padding: 2.4rem 2rem;
