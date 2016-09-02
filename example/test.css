@@ -1,0 +1,42 @@
+body {
+}
+
+.grid-boxes::before {
+  background-color: #003399;
+  color: #ffffff;
+  content: 'Column';
+  display: block;
+  line-height: 4rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.chevron-container { /* full slider height container for chevrons */
+  height: 100%;
+  position: absolute;
+  width: 100px;
+}
+
+.slick-right { /* keeps right arrow to the right */
+  right: 0;
+  top: 0;
+}
+
+.chevron-container > .fa { /* positions chevrons in vertical center */
+  bottom: 0;
+  color: black;
+  font-size: 7em;
+  height: 1em;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.fa-chevron-right {
+  right: 0;
+}
+
+.slick-slide img {
+  width: 100%;
+}

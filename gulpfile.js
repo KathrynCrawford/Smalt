@@ -10,7 +10,7 @@ gulp.task('css', function() {
     return sass('scss/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(autoprefixer())
-        .pipe(concat('styles.css'))
+        .pipe(concat('smalt.css'))
         .on('error', sass.logError)
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./css'))

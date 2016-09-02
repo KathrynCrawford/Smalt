@@ -9,15 +9,17 @@ Markup:
   Example Text
 </div>
 
-.disabled                 - Disable an Element
+.disabled                - Disable an Element
 .clearfix                - Clear floats to keep the parent container in shape
 .f-none                  - float: none;
 .f-left                  - float: left;
-.f-right                  - float: right;
+.f-right                 - float: right;
 .ta-left                 - text-align: left;
-.ta-center                - text-align: center;
+.ta-center               - text-align: center;
 .ta-right                - text-align: right;
 .sr-only                 - for screen readers only (accessibility)
+.grid-center             - centering for direct children of grids
+.center                  - centering for elements not children of grids
 
 Styleguide 4.0
 
@@ -69,6 +71,13 @@ Styleguide 4.0
   width: 1px;
 }
 
+.grid-center {
+  align-self: center;
+}
+
+.center {
+  margin: 0 auto;
+}
 
 /*
 
