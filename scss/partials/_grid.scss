@@ -16,6 +16,7 @@ Markup:
 
 .grid--medium           - Grid starts at medium sized screens
 .grid--large            - Grid starts at large and up screens
+.grid--vertical         - Creates a vertical grid (used for vertical positioning)
 
 Styleguide 1.0
 
@@ -52,7 +53,7 @@ Styleguide 1.1
   display: flex;
 
 // columns
-  * {
+  > * {
     flex: 1;
     flex-grow: 4;
     padding-left: 1rem;
@@ -73,6 +74,19 @@ Styleguide 1.1
     &.column--heavy {
       flex-grow: 8;
     }
+  }
+}
+
+.grid--vertical {
+  flex-direction: column;
+  justify-content: center;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 }
 

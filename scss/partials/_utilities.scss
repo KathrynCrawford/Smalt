@@ -20,6 +20,7 @@ Markup:
 .sr-only                 - for screen readers only (accessibility)
 .grid-center             - centering for direct children of grids
 .center                  - centering for elements not children of grids
+.full-width              - styles for full width elements
 
 Styleguide 4.0
 
@@ -75,8 +76,13 @@ Styleguide 4.0
   align-self: center;
 }
 
-.center {
+.sm-center {
   margin: 0 auto;
+}
+
+.full-width {
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 /*

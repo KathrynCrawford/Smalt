@@ -11,6 +11,11 @@ body {
   text-align: center;
 }
 
+.img-full {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 .chevron-container { /* full slider height container for chevrons */
   height: 100%;
   position: absolute;
