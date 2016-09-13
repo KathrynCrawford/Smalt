@@ -1,0 +1,27 @@
+/*
+
+Sticky footer
+
+A simple sticky footer using flexbox.
+
+Simply apply the site class to your body (or the div containing header, content, footer, etc.) and apply the site-content class to your content. In the case of Wordpress, this will be applied automatically.
+
+<body class="site">
+  <header>
+  </header>
+  <div class="site-content">
+  </div>
+  <footer>
+  </footer>
+<body>
+*/
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
