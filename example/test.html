@@ -9,40 +9,81 @@
 
   <body>
 
-  <div class="wrapper-large">
-    <h1 class="ta-center">SMALT</h1>
+    <header class="navbar || navbar--fixed || grid">
+      <div class="site-branding">
+        <a href="#">
+          <img src="http://www.fillmurray.com/75/75" alt="ivie logo">
+        </a>
+      </div>
+      <!-- .site-branding -->
 
-    <img class="img-full" src="http://www.fillmurray.com/600/300">
+      <nav class="main-navigation || grid || js-collapse_nav" role="navigation">
+        <button class="nav_button--collapse || js-collapse_button" aria-controls="primary-menu" aria-expanded="false">Primary Menu</button>
+        <ul class="nav || js-collapse_menu" aria-expanded="false">
+          <li class="menu-item || nav_item || active">
+            <a class="nav_link" href="#">Home</a>
+          </li>
+          <li class="menu-item || nav_item" aria-haspopup="true">
+            <a class="nav_link" href="#">Careers</a>
+            <ul class="sub-menu">
+              <li class="menu-item || nav_item">
+                <a class="nav_link" href="#">Internships</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item || nav_item">
+            <a class="nav_link" href="#">Blog</a>
+          </li>
+          <li class="menu-item || nav_item">
+            <a class="nav_link" href="#">Contact</a>
+          </li>
+          <li class="menu-item || nav_item">
+            <a class="nav_link" href="#">Ivie Difference</a>
+          </li>
+          <li class="menu-item || nav_item">
+            <a class="nav_link" href="#">Services</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- #site-navigation -->
+    </header>
 
-    <div class="grid">
-      <div class="grid-boxes"></div>
-      <div class="grid-boxes"></div>
+    <div class="wrapper-large">
+      <h1 class="ta-center">SMALT</h1>
+
+      <img class="img-full" src="http://www.fillmurray.com/600/300">
+
+      <div class="grid">
+        <div class="grid-boxes"></div>
+        <div class="grid-boxes"></div>
+      </div>
+
+      <div class="grid || grid--medium">
+        <div class="grid-boxes"></div>
+        <div class="grid-boxes"></div>
+        <div class="grid-boxes"></div>
+      </div>
+
+      <div class="grid || grid--large">
+        <div class="grid-boxes || column--heavy"></div>
+        <div class="grid-boxes"></div>
+        <div class="grid-boxes || column--light"></div>
+      </div>
+
+      <div>
+        <button class="btn || btn--small">SMALL BUTTON</button>
+        <button class="btn">NORMAL BUTTON</button>
+        <button class="btn || btn--large">LARGE BUTTON</button>
+      </div>
+
+      <div>
+        <button class="btn || btn--secondary || btn--small">SMALL BUTTON</button>
+        <button class="btn || btn--secondary">NORMAL BUTTON</button>
+        <button class="btn || btn--secondary || btn--large">LARGE BUTTON</button>
+      </div>
     </div>
 
-    <div class="grid || grid--medium">
-      <div class="grid-boxes"></div>
-      <div class="grid-boxes"></div>
-      <div class="grid-boxes"></div>
-    </div>
-
-    <div class="grid || grid--large">
-      <div class="grid-boxes || column--heavy"></div>
-      <div class="grid-boxes"></div>
-      <div class="grid-boxes || column--light"></div>
-    </div>
-
-    <div>
-      <button class="btn || btn--small">SMALL BUTTON</button>
-      <button class="btn">NORMAL BUTTON</button>
-      <button class="btn || btn--large">LARGE BUTTON</button>
-    </div>
-
-    <div>
-      <button class="btn || btn--secondary || btn--small">SMALL BUTTON</button>
-      <button class="btn || btn--secondary">NORMAL BUTTON</button>
-      <button class="btn || btn--secondary || btn--large">LARGE BUTTON</button>
-    </div>
-  </div>
+    <br>
 
     <div class="slick-slider">
       <div>
@@ -59,6 +100,7 @@
     <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
     <script src="../js/slick.min.js"></script>
+    <script src="../js/nav.js"></script>
 
     <script type="text/javascript">
       $(document).ready(function(){

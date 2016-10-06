@@ -1,6 +1,8 @@
 * {
   border: 0;
   font: inherit;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   margin: 0;
@@ -21,7 +23,7 @@ html {
 body {
   box-sizing: border-box;
   color: $gray1;
-  font-family: $base-font;
+  font-family: $body;
   font-size: $font-size;
   line-height: $line-height;
   min-height: 100%;

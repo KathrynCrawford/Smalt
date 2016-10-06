@@ -1,0 +1,155 @@
+/*===================================
+NAV
+NAV
+NAV
+NAV
+=================================== */
+
+.nav_button--collapse {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  cursor: pointer;
+  font-size: 3rem;
+  color: #fff;
+  z-index: 998;
+}
+
+.nav {
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  position: absolute;
+  width: 1px;
+}
+
+.nav--column {
+  align-items: flex-end;
+  flex-direction: column;
+
+  .nav_item {
+    flex-grow: unset;
+    text-align: left;
+    margin-right: 1rem;
+  }
+}
+
+.nav_item {
+  align-items: center;
+  border-radius: 10%;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  list-style: none;
+  padding: 1rem;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+.nav_link {
+  text-decoration: none;
+}
+
+.sub-menu {
+  height: auto;
+  opacity: 0;
+  padding: 1rem;
+  white-space: nowrap;
+  visibility: hidden;
+
+  .nav_item {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.menu-item:hover > .sub-menu {
+  display: block;
+  opacity: 1;
+  text-align: center;
+  transform: translate3d(0, 0, 0);
+  visibility: visible;
+}
+
+@media only screen and (min-width: 900px) {
+
+  .nav {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 0;
+    position: relative;
+    margin: 0;
+    width: auto;
+  }
+
+  .nav_button--collapse {
+    display: none;
+  }
+
+  .sub-menu {
+    background: #dededf;
+    border-radius: 10%;
+    position: absolute;
+    transform: translate3d(-15px, 0, -300px);
+    transform-style: preserve-3d;
+    transition: all 0.2s cubic-bezier(0.712, 0.0376, 0.392, 1);
+    top: 5rem;
+
+    .nav_item {
+      border: none;
+    }
+  }
+}
+
+/*===================================
+COLLAPSE
+COLLAPSE
+COLLAPSE
+COLLAPSE
+COLLAPSE
+=================================== */
+
+.collapse--active {
+  background-color: white;
+  clip: auto;
+  flex-direction: column;
+  height: auto;
+  left: 0;
+  padding: 0;
+  position: fixed;
+  top: 5rem;
+  width: 100vw;
+  z-index: 999;
+
+  .nav_item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+    border-radius: 0;
+    font-size: 2rem;
+    height: 5rem;
+    justify-content: flex-start;
+    text-align: left;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .sub-menu {
+    .nav_item {
+      border: none;
+      border-left: 1px solid rgba(0, 0, 0, 0.9);
+    }
+  }
+}
+
+/*===================================
+PILLS
+PILLS
+PILLS
+PILLS
+PILLS
+=================================== */
+
+.active {
+  background-color: #3c3c3d;
+}

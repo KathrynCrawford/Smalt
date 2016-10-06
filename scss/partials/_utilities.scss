@@ -21,6 +21,7 @@ Markup:
 .grid-center             - centering for direct children of grids
 .center                  - centering for elements not children of grids
 .full-width              - styles for full width elements
+.full-height             - styles for full height (of parent container) elements
 
 Styleguide 4.0
 
@@ -81,8 +82,11 @@ Styleguide 4.0
 }
 
 .full-width {
-  margin-bottom: 2rem;
   width: 100%;
+}
+
+.full-height {
+  height: 100%;
 }
 
 /*
