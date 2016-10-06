@@ -1,3 +1,4 @@
+
 <!doctype>
 <html lang="en">
 	<head>
@@ -6,10 +7,12 @@
 		<title>SMALT</title>
 		<meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    	<link rel="stylesheet" href="css/cutestrap.css">
+    	<link rel="stylesheet" href="css/smalt
+			.css">
 	</head>
 	<body>
 		<div class="wrapper">
+			<h1>SMALT FORMS</h1>
 			<div class="grid">
 				<div class="column--light ta-center">
 					******
@@ -23,6 +26,7 @@
 			</div>
 
 			<form>
+			<h3 class="ta-center">Input Text Boxes</h3>
 			<div class="grid">
 			  	<div>
 			  		<label class="textfield">
@@ -46,6 +50,7 @@
 		  	</div>
 			</div>
 			<hr>
+			<h3 class="ta-center">Email and Password Input Boxes</h3>
 			<div class="grid grid--large">
 			  	<div>
 			  		<div class="grid grid--medium">
@@ -69,16 +74,20 @@
 			  	</div>
 			</div>
 			<hr>
+			<h3 class="ta-center">Radio Buttons and Select Lists</h3>
 			<div class="grid grid--large">
 				<div>
-			  		<label class="radio">
-			    		<input type="radio" name="example" />
-			    		<span class="radio__label">Desktop</span>
-			  		</label>
-			  		<label class="radio">
-			    		<input type="radio" name="example" />
-			    		<span class="radio__label">Mobile</span>
-			  		</label>
+						<fieldset>
+							<legend>Browser Type</legend>
+				  		<label class="radio">
+				    		<input type="radio" name="example" />
+				    		<span class="radio__label">Desktop</span>
+				  		</label>
+				  		<label class="radio">
+				    		<input type="radio" name="example" />
+				    		<span class="radio__label">Mobile</span>
+				  		</label>
+						</fieldset>
 			  	</div>
 			  	<div>
 			  		<label class="select">
@@ -90,17 +99,21 @@
 				  	</label>
 			  	</div>
 			  	<div>
-			  		<label class="radio">
-			    		<input type="radio" name="example" />
-			    		<span class="radio__label">CSS</span>
-			  		</label>
-			  		<label class="radio">
-			    		<input type="radio" name="example" />
-			    		<span class="radio__label">PHP</span>
-			  		</label>
+						<fieldset>
+							<legend>Favorite Language</legend>
+				  		<label class="radio">
+				    		<input type="radio" name="example" />
+				    		<span class="radio__label">CSS</span>
+				  		</label>
+				  		<label class="radio">
+				    		<input type="radio" name="example" />
+				    		<span class="radio__label">PHP</span>
+				  		</label>
+						</fieldset>
 			  	</div>
 			</div>
 			<hr>
+			<h3 class="ta-center">Checkbox and Textarea</h3>
 			<div class="grid grid--large">
 				<div class="column--heavy">
 				  	<label class="textfield">
@@ -115,11 +128,15 @@
 				  	</label>
 				</div>
 			</div>
+			<hr>
+			<h3 class="ta-center">Buttons</h3>
+			<div>
 			  <input type="submit" value="Cross My Heart" />
 			  <button class="btn || btn--large">LARGE</button>
 			  <button class="btn">MEDIUM</button>
 			  <button class="btn || btn--small">SMALL</button>
 			  <button class="btn || btn--secondary">OTHER BUTTON</button>
+			</div>
 			</form>
 		</div>
 	</body>
