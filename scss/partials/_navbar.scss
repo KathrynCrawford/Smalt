@@ -1,5 +1,5 @@
 .navbar {
-  background: #dededf;
+  background: $white;
   margin-bottom: 2rem;
   min-height: 4.5rem;
   position: relative;
@@ -7,8 +7,8 @@
 
 .navbar--fixed {
   position: fixed;
-  top: 0;
   right: 0;
+  top: 0;
   width: 100vw;
   z-index: 999;
 }

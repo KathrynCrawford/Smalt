@@ -26,8 +26,21 @@ jQuery(document).ready(function($){
 
   for ( var i = 0; i < numCollapseButtons; i++ ){
     collapseButtons[i].addEventListener('click', function() {
-      $(collapseButtons[i-1]).next().toggleClass('collapse--active');
-    }, false);
+
+      console.log ('clicked!');
+      if ($(collapseButtons[i-1]).next().hasClass('show-nav')) {
+        $(collapseButtons[i-1]).next().removeClass('show-nav').addClass('hide-nav');
+
+        setTimeout(function() {
+          $(collapseButtons[i-1]).next().removeClass('hide-nav');
+        }, 500);
+
+      } else {
+        $(collapseButtons[i-1]).next().removeClass('hide-nav').addClass('show-nav');
+      }
+
+      return false;
+    });
   }
 
 });

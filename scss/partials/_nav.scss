@@ -1,3 +1,14 @@
+%sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 /*===================================
 NAV
 NAV
@@ -5,100 +16,173 @@ NAV
 NAV
 =================================== */
 
-.nav_button--collapse {
-  position: fixed;
-  top: 1rem;
-  right: 2rem;
+.nav__button--collapse {
+  color: $white;
   cursor: pointer;
   font-size: 3rem;
-  color: #fff;
-  z-index: 998;
+  position: fixed;
+  right: 2rem;
+  top: 1rem;
+  z-index: 999;
+
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 898px) {
+
+  .hamburger {
+    background: $primary;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height: 8px;
+    margin-top: 2rem;
+    width: 4rem;
+
+    &:hover,
+    &:focus {
+      &::before,
+      &::after {
+        background-color: $secondary;
+        transition-duration: 200ms;
+        transition-property: background-color;
+      }
+    }
+
+    &:focus {
+      &::before,
+      &::after {
+        outline: 0.1rem dotted $gray3;
+      }
+    }
+
+    &:active {
+      &::before,
+      &::after {
+        background-color: $secondary;
+      }
+    }
+
+    &::before,
+    &::after {
+      background-color: $primary;
+      content: '';
+      display: block;
+      height: 8px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    &::before {
+      top: -1.25rem;
+    }
+
+    &::after {
+      bottom: -1.25rem;
+    }
+  }
 }
 
 .nav {
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  position: absolute;
-  width: 1px;
+  @extend %sr-only;
+  display: flex;
+  opacity: 0;
+  overflow: visible;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 500ms ease;
+
+  @media screen and (min-width: 900px) {
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: flex-end;
+    margin: 0;
+    opacity: 1;
+    padding: 0;
+    position: relative;
+    width: auto;
+  }
 }
 
 .nav--column {
   align-items: flex-end;
   flex-direction: column;
 
-  .nav_item {
+  .nav__item {
     flex-grow: unset;
-    text-align: left;
     margin-right: 1rem;
+    text-align: left;
   }
 }
 
-.nav_item {
-  align-items: center;
+.nav__item {
   border-radius: 10%;
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
   list-style: none;
+  margin-right: 2rem;
   padding: 1rem;
   text-align: center;
-  margin-right: 2rem;
 }
 
-.nav_link {
+.nav__link {
   text-decoration: none;
 }
 
 .sub-menu {
-  height: auto;
-  opacity: 0;
-  padding: 1rem;
-  white-space: nowrap;
-  visibility: hidden;
+  @extend %sr-only;
 
-  .nav_item {
+  .nav__item {
     margin: 0;
     padding: 0;
   }
-}
 
-.menu-item:hover > .sub-menu {
-  display: block;
-  opacity: 1;
-  text-align: center;
-  transform: translate3d(0, 0, 0);
-  visibility: visible;
-}
-
-@media only screen and (min-width: 900px) {
-
-  .nav {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-    padding: 0;
-    position: relative;
-    margin: 0;
-    width: auto;
-  }
-
-  .nav_button--collapse {
-    display: none;
-  }
-
-  .sub-menu {
-    background: #dededf;
+  @media screen and (min-width: 900px) {
+    background: $white;
     border-radius: 10%;
+    clip: auto;
+    height: auto;
+    opacity: 0;
+    padding: 1rem;
     position: absolute;
     transform: translate3d(-15px, 0, -300px);
     transform-style: preserve-3d;
     transition: all 0.2s cubic-bezier(0.712, 0.0376, 0.392, 1);
-    top: 5rem;
+    visibility: hidden;
+    width: auto;
 
-    .nav_item {
-      border: none;
+    .nav__item {
+      border: 0;
+    }
+  }
+}
+
+.menu-item {
+  &:hover {
+    .sub-menu {
+      display: block;
+      opacity: 1;
+      text-align: center;
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+
+    @media screen and (max-width: 899px) {
+      .sub-menu {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        margin-top: 1rem;
+        overflow: auto;
+        position: relative;
+        width: 100%;
+
+        .nav__item {
+          margin-left: 0;
+        }
+      }
     }
   }
 }
@@ -111,35 +195,34 @@ COLLAPSE
 COLLAPSE
 =================================== */
 
-.collapse--active {
-  background-color: white;
+.show-nav {
+  background-color: $white;
   clip: auto;
   flex-direction: column;
-  height: auto;
+  height: 100vh;
+  justify-content: center;
   left: 0;
+  opacity: 1;
   padding: 0;
   position: fixed;
-  top: 5rem;
   width: 100vw;
-  z-index: 999;
+  z-index: 998;
 
-  .nav_item {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+  .nav__item {
     border-radius: 0;
-    font-size: 2rem;
-    height: 5rem;
+    font-size: 3.6rem;
     justify-content: flex-start;
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
+    line-height: 4.8rem;
+    margin: 0;
   }
 
-  .sub-menu {
-    .nav_item {
-      border: none;
-      border-left: 1px solid rgba(0, 0, 0, 0.9);
-    }
+  .nav__link {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
   }
+}
+
+.hide-nav {
+  opacity: 0;
 }
 
 /*===================================
@@ -151,5 +234,5 @@ PILLS
 =================================== */
 
 .active {
-  background-color: #3c3c3d;
+  background-color: $gray1;
 }
