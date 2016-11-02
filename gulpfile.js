@@ -18,5 +18,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('default', function() {
+    gulp.run('css');
+
     gulp.watch('scss/**/*.scss',['css']);
 });

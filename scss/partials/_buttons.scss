@@ -59,16 +59,16 @@ Styleguide 2.0
   &:active {
     background-color: $secondary;
   }
-}
 
-.btn--small {
-  @include btn-size(0.2rem, 3.3rem, 0 2rem);
-  font-size: $font-size--small;
-}
+  &--small {
+    @include btn-size(0.2rem, 3.3rem, 0 2rem);
+    font-size: $font-size--small;
+  }
 
-.btn--large {
-  @include btn-size(0.2rem, 5.2rem, 0 4rem);
-  font-size: $font-size--large;
+  &--large {
+    @include btn-size(0.2rem, 5.2rem, 0 4rem);
+    font-size: $font-size--large;
+  }
 }
 
 .btn--secondary {

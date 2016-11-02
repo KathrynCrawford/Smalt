@@ -148,16 +148,16 @@ Styleguide 1.2
   margin: 0 auto;
   max-width: 960px;
   padding: 4.8rem 2rem;
-}
 
-.wrapper-large {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 7.2rem 2rem;
-}
+  &-large {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 7.2rem 2rem;
+  }
 
-.wrapper-small {
-  margin: 0 auto;
-  max-width: 640px;
-  padding: 2.4rem 2rem;
+  &-small {
+    margin: 0 auto;
+    max-width: 640px;
+    padding: 2.4rem 2rem;
+  }
 }

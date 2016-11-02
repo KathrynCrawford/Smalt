@@ -20,8 +20,8 @@ Simply apply the site class to your body (or the div containing header, content,
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-}
 
-.site-content {
-  flex: 1;
+  &-content {
+    flex: 1;
+  }
 }

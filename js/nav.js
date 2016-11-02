@@ -27,9 +27,10 @@ jQuery(document).ready(function($){
   for ( var i = 0; i < numCollapseButtons; i++ ){
     collapseButtons[i].addEventListener('click', function() {
 
-      console.log ('clicked!');
       if ($(collapseButtons[i-1]).next().hasClass('show-nav')) {
         $(collapseButtons[i-1]).next().removeClass('show-nav').addClass('hide-nav');
+
+        $(document.body).removeClass('no-scroll');
 
         setTimeout(function() {
           $(collapseButtons[i-1]).next().removeClass('hide-nav');
@@ -37,6 +38,8 @@ jQuery(document).ready(function($){
 
       } else {
         $(collapseButtons[i-1]).next().removeClass('hide-nav').addClass('show-nav');
+
+        $(document.body).addClass('no-scroll');
       }
 
       return false;
