@@ -94,28 +94,52 @@ COLLAPSE
 COLLAPSE
 =================================== */
 
-.no-scroll {
+/* Disable scroll when menu or sidebar is open. */
+.disable-scroll {
   overflow: hidden;
 }
 
-.nav__button--collapse {
-  color: $white;
-  cursor: pointer;
-  font-size: 3rem;
+.nav-collapse {
+  background: rgba(255,255,255,0.99);
+  bottom: 110%;
+  display: none;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  overflow: auto;
+  padding: 0;
   position: fixed;
-  right: 2rem;
-  top: 1rem;
-  z-index: 999;
+  top: 0;
+  width: 100vw;
+  z-index: 1000;
 
-  @media screen and (min-width: 900px) {
-    display: none;
+  .nav__item {
+    border-radius: 0;
+    font-size: 3.6rem;
+    justify-content: flex-start;
+    line-height: 4.8rem;
+    margin: 0;
   }
 
+  .nav__link {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+  }
 }
 
-@media screen and (max-width: 898px) {
+.main-navigation-open .nav-collapse {
+  bottom: 0;
+  opacity: 1;
+}
 
-  .hamburger {
+.main-navigation-open .nav-collapse__button {
+  z-index: 1001;
+}
+
+.hamburger {
+  @media screen and (max-width: 898px) {
     background: $primary;
     cursor: pointer;
     display: block;
@@ -167,42 +191,6 @@ COLLAPSE
       bottom: -1.25rem;
     }
   }
-}
-
-.nav--collapse {
-  display: none;
-  margin: 0;
-  opacity: 0;
-  transition: opacity 1s;
-}
-
-.show-nav {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  left: 0;
-  opacity: 1;
-  overflow: auto;
-  padding: 0;
-  position: fixed;
-  width: 100vw;
-
-  .nav__item {
-    border-radius: 0;
-    font-size: 3.6rem;
-    justify-content: flex-start;
-    line-height: 4.8rem;
-    margin: 0;
-  }
-
-  .nav__link {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
-  }
-}
-
-.hide-nav {
-  opacity: 0;
 }
 
 /*===================================
