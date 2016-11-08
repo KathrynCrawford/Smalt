@@ -1,8 +1,43 @@
-/*===================================
-NAV
-NAV
-NAV
-NAV
+/* ===================================
+
+Nav
+
+Navigation classes for basic flex based navigation
+
+Markup
+
+<nav class="grid" role="navigation">
+  <ul class="nav">
+    <li class="nav__item">
+      <a href="#">Home</a>
+    </li>
+    <li class="nav__item">
+      <a href="#">Careers</a>
+      <ul class="sub-menu">
+        <li class="nav__item">
+          <a href="#">Internships</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav__item">
+      <a href="#">Blog</a>
+    </li>
+    <li class="nav__item">
+      <a href="#">Contact</a>
+    </li>
+    <li class="nav__item">
+      <a href="#">Ivie Difference</a>
+    </li>
+    <li class="nav__item">
+      <a href="#">Services</a>
+    </li>
+  </ul>
+</nav>
+
+.nav              sets up flex nav grid with content justified to the right of the header
+.nav__item        basic styles for nav list items
+.nav--sub-menu    styling for 2-level menus
+
 =================================== */
 
 .nav {
@@ -18,12 +53,12 @@ NAV
     text-align: center;
   }
 
-  &__link {
+  a {
     text-decoration: none;
   }
 }
 
-.sub-menu {
+.nav--sub-menu {
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
@@ -58,9 +93,9 @@ NAV
   }
 }
 
-.menu-item {
+.nav__item {
   &:hover {
-    .sub-menu {
+    .nav--sub-menu {
       display: block;
       opacity: 1;
       text-align: center;
@@ -69,7 +104,7 @@ NAV
     }
 
     @media screen and (max-width: 899px) {
-      .sub-menu {
+      .nav--sub-menu {
         clip: auto;
         height: auto;
         margin: 0;
@@ -86,121 +121,147 @@ NAV
   }
 }
 
-/*===================================
-COLLAPSE
-COLLAPSE
-COLLAPSE
-COLLAPSE
-COLLAPSE
+/* ===================================
+
+Nav collapse
+
+Add these extra classes to your nav elements to create an accessible fullscreen menu on mobile
+
+Markup
+<nav class="grid" role="navigation">
+  <button class="nav-collapse__button js-collapse--button">Menu</button>
+  <ul class="nav nav-collapse js-collapse--nav">
+    <li class="nav__item">
+    .
+    .
+    .
+    .
+    </li>
+  </ul>
+</nav>
+
+.nav-collapse__button     styling for menu button to trigger menu opening
+.disable-scroll           javascript enabled styles to prevent body scrolling on menu open
+.nav-collapse             fullscreen positioning and styling for collapsable menu
 =================================== */
 
-/* Disable scroll when menu or sidebar is open. */
-.disable-scroll {
-  overflow: hidden;
-}
-
-.nav-collapse {
-  background: rgba(255,255,255,0.99);
-  bottom: 110%;
+.nav-collapse__button {
   display: none;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  left: 0;
-  margin: 0;
-  opacity: 0;
-  overflow: auto;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  z-index: 1000;
+}
 
-  .nav__item {
-    border-radius: 0;
-    font-size: 3.6rem;
-    justify-content: flex-start;
-    line-height: 4.8rem;
-    margin: 0;
+@media screen and (max-width: 899px) {
+  /* Disable scroll when menu or sidebar is open. */
+  .disable-scroll {
+    overflow: hidden;
   }
 
-  .nav__link {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
-  }
-}
-
-.main-navigation-open .nav-collapse {
-  bottom: 0;
-  opacity: 1;
-}
-
-.main-navigation-open .nav-collapse__button {
-  z-index: 1001;
-}
-
-.hamburger {
-  @media screen and (max-width: 898px) {
-    background: $primary;
-    cursor: pointer;
+  .nav-collapse__button {
     display: block;
-    font-size: 0;
-    height: 8px;
-    margin-top: 2rem;
-    width: 4rem;
+  }
 
-    &:hover,
-    &:focus {
-      &::before,
-      &::after {
-        background-color: $secondary;
-        transition-duration: 200ms;
-        transition-property: background-color;
-      }
+  .nav-collapse {
+    background: $gray5;
+    bottom: 110%;
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    overflow: auto;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+
+    .nav__item {
+      border-radius: 0;
+      font-size: 3.6rem;
+      justify-content: flex-start;
+      line-height: 4.8rem;
+      margin: 0;
     }
 
-    &:focus {
-      &::before,
-      &::after {
-        outline: 0.1rem dotted $gray3;
-      }
-    }
-
-    &:active {
-      &::before,
-      &::after {
-        background-color: $secondary;
-      }
-    }
-
-    &::before,
-    &::after {
-      background-color: $primary;
-      content: '';
-      display: block;
-      height: 8px;
-      left: 0;
-      position: absolute;
-      width: 100%;
-    }
-
-    &::before {
-      top: -1.25rem;
-    }
-
-    &::after {
-      bottom: -1.25rem;
+    .nav__link {
+      border-bottom: 1px solid $black;
     }
   }
+
+  .main-navigation-open .nav-collapse {
+    bottom: 0;
+    opacity: 1;
+  }
+
+  .main-navigation-open .nav-collapse__button {
+    z-index: 1001;
+  }
+  //
+  // .hamburger {
+  //   @media screen and (max-width: 898px) {
+  //     background: $primary;
+  //     cursor: pointer;
+  //     display: block;
+  //     font-size: 0;
+  //     height: 8px;
+  //     margin-top: 2rem;
+  //     width: 4rem;
+  //
+  //     &:hover,
+  //     &:focus {
+  //       &::before,
+  //       &::after {
+  //         background-color: $secondary;
+  //         transition-duration: 200ms;
+  //         transition-property: background-color;
+  //       }
+  //     }
+  //
+  //     &:focus {
+  //       &::before,
+  //       &::after {
+  //         outline: 0.1rem dotted $gray3;
+  //       }
+  //     }
+  //
+  //     &:active {
+  //       &::before,
+  //       &::after {
+  //         background-color: $secondary;
+  //       }
+  //     }
+  //
+  //     &::before,
+  //     &::after {
+  //       background-color: $primary;
+  //       content: '';
+  //       display: block;
+  //       height: 8px;
+  //       left: 0;
+  //       position: absolute;
+  //       width: 100%;
+  //     }
+  //
+  //     &::before {
+  //       top: -1.25rem;
+  //     }
+  //
+  //     &::after {
+  //       bottom: -1.25rem;
+  //     }
+  //   }
+  // }
 }
 
-/*===================================
-PILLS
-PILLS
-PILLS
-PILLS
-PILLS
+/* ===================================
+
+Nav Pills
+
+This class will be added with javascript if the pills.js file is included
+
 =================================== */
 
-.active {
+.pill {
   background-color: $gray1;
 }
