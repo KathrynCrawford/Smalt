@@ -3,25 +3,26 @@
 // Styleguide
 
 // primary colors
-$primary:        #003399 !default;
-$secondary:      #2562be !default;
-$tertiary:       #6d76c3 !default;
-$quaternary:     #2c9dbb !default;
+$primary:        #3F3C96 !default;
+$secondary:      #4C243B !default;
 
-$link:           #337ab7 !default;
+$white:          #FFFBFC !default;
+$black:          #222222 !default;
+
+$link:           $secondary !default;
 $link--visited:  darken($link, 10%) !default;
-$link--hover:    #3abbdc !default;
+$link--hover:    darken($link, 10%) !default;
 $link--active:   lighten($link, 10%) !default;
 
 // dark shades
-$gray1:          #3c3c3d !default;
-$gray2:          #5a5a5b !default;
-$gray3:          #7d7d7e !default;
+$gray3:          #706677 !default;
+$gray1:          darken($gray3, 20%)  !default;
+$gray2:          darken($gray3, 10%) !default;
 
 // light shades
-$gray4:          #cdcdce !default;
-$gray5:          #dededf !default;
-$gray6:          #efeff0 !default;
+$gray4:          lighten($gray3, 20%) !default;
+$gray5:          lighten($gray3, 35%) !default;
+$gray6:          lighten($gray3, 50%) !default;
 
-$white:          #fff !default;
-$black:          #000 !default;
+$white:          #FFFBFC !default;
+$black:          #222222 !default;

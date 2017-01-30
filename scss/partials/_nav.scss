@@ -13,7 +13,7 @@ Markup
     </li>
     <li class="nav__item">
       <a href="#">Careers</a>
-      <ul class="sub-menu">
+      <ul class="nav--sub-menu">
         <li class="nav__item">
           <a href="#">Internships</a>
         </li>
@@ -197,61 +197,6 @@ Markup
   .main-navigation-open .nav-collapse__button {
     z-index: 1001;
   }
-  //
-  // .hamburger {
-  //   @media screen and (max-width: 898px) {
-  //     background: $primary;
-  //     cursor: pointer;
-  //     display: block;
-  //     font-size: 0;
-  //     height: 8px;
-  //     margin-top: 2rem;
-  //     width: 4rem;
-  //
-  //     &:hover,
-  //     &:focus {
-  //       &::before,
-  //       &::after {
-  //         background-color: $secondary;
-  //         transition-duration: 200ms;
-  //         transition-property: background-color;
-  //       }
-  //     }
-  //
-  //     &:focus {
-  //       &::before,
-  //       &::after {
-  //         outline: 0.1rem dotted $gray3;
-  //       }
-  //     }
-  //
-  //     &:active {
-  //       &::before,
-  //       &::after {
-  //         background-color: $secondary;
-  //       }
-  //     }
-  //
-  //     &::before,
-  //     &::after {
-  //       background-color: $primary;
-  //       content: '';
-  //       display: block;
-  //       height: 8px;
-  //       left: 0;
-  //       position: absolute;
-  //       width: 100%;
-  //     }
-  //
-  //     &::before {
-  //       top: -1.25rem;
-  //     }
-  //
-  //     &::after {
-  //       bottom: -1.25rem;
-  //     }
-  //   }
-  // }
 }
 
 /* ===================================

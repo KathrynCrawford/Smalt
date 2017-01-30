@@ -17,9 +17,6 @@ jQuery(function($) {
 	 */
 	( function() {
 
-    console.log(mainNav);
-    console.log(menuToggle);
-
 		// Return early if menuToggle is missing.
 		if ( ! menuToggle.length ) {
 			return;

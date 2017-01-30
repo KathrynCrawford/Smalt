@@ -46,7 +46,7 @@ Markup:
 
   &:focus,
   &:hover {
-    background-color: $secondary;
+    background-color: lighten($primary, 10%);
     color: $white;
   }
 
@@ -55,7 +55,7 @@ Markup:
   }
 
   &:active {
-    background-color: $secondary;
+    background-color: darken($primary, 10%);
   }
 
   &--small {
@@ -70,7 +70,7 @@ Markup:
 }
 
 .btn--secondary {
-  background-color: $gray6;
+  background-color: $gray5;
   color: $gray1;
 
   &:link,
@@ -80,12 +80,12 @@ Markup:
 
   &:focus,
   &:hover {
-    background-color: $gray5;
+    background-color: lighten($gray5, 10%);
     color: $gray1;
   }
 
   &:active {
-    color: $gray3;
+    background-color: darken($gray5, 10%);
   }
 }
 
