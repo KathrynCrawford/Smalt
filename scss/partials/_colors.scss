@@ -9,7 +9,7 @@ $secondary:      #4C243B !default;
 $white:          #FFFBFC !default;
 $black:          #222222 !default;
 
-$link:           $secondary !default;
+$link:           $gray1 !default;
 $link--visited:  darken($link, 10%) !default;
 $link--hover:    darken($link, 10%) !default;
 $link--active:   lighten($link, 10%) !default;
