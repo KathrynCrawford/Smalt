@@ -9,11 +9,6 @@ $secondary:      #4C243B !default;
 $white:          #FFFBFC !default;
 $black:          #222222 !default;
 
-$link:           $gray1 !default;
-$link--visited:  darken($link, 10%) !default;
-$link--hover:    darken($link, 10%) !default;
-$link--active:   lighten($link, 10%) !default;
-
 // dark shades
 $gray3:          #706677 !default;
 $gray1:          darken($gray3, 20%)  !default;
@@ -24,5 +19,7 @@ $gray4:          lighten($gray3, 20%) !default;
 $gray5:          lighten($gray3, 35%) !default;
 $gray6:          lighten($gray3, 50%) !default;
 
-$white:          #FFFBFC !default;
-$black:          #222222 !default;
+$link:           $gray1 !default;
+$link--visited:  darken($link, 10%) !default;
+$link--hover:    darken($link, 10%) !default;
+$link--active:   lighten($link, 10%) !default;
