@@ -89,7 +89,7 @@ pre,
 code,
 samp,
 kbd {
-  background-color: $gray6;
+  background-color: $gray1;
   color: $primary;
   font-family: $monospace;
   font-size: $font-size--small;
@@ -154,7 +154,7 @@ hr {
   position: relative;
 
   &::before {
-    background-color: $gray4;
+    background-color: $gray2;
     content: '';
     height: 1px;
     position: absolute;
@@ -194,7 +194,7 @@ dd {
 }
 
 blockquote {
-  border-left: 0.3rem solid $gray4;
+  border-left: 0.3rem solid $gray2;
   margin: 0 0 2.4rem 1.2rem;
   padding: 2.4rem 1.2rem;
 
@@ -281,7 +281,7 @@ table {
 }
 
 label {
-  color: $gray3;
+  color: $gray2;
 }
 
 input,

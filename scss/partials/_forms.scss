@@ -96,7 +96,7 @@ select {
 
   &::before {
     background-color: $white;
-    border: 2px solid $gray3;
+    border: 2px solid $gray1;
     content: '';
     height: 16px;
     left: 0;
@@ -116,7 +116,7 @@ select {
 
 .radio__label,
 .checkbox__label {
-  color: $gray3;
+  color: $gray1;
   font-size: $font-size--small;
   line-height: 1;
 
@@ -135,7 +135,7 @@ select {
 .radio input[type='radio']:focus + .radio__label::after,
 .checkbox input[type='checkbox']:focus + .checkbox__label::after {
   border-color: $primary;
-  box-shadow: 0 1px 2px 1px $gray5 inset;
+  box-shadow: 0 1px 2px 1px $gray2 inset;
 }
 
 //
@@ -168,7 +168,7 @@ input,
 textarea,
 select {
   background-color: transparent;
-  border: 1px solid $gray3;
+  border: 1px solid $gray1;
   border-radius: 2px;
   box-sizing: border-box;
   padding: 0.6rem 0.5rem;
@@ -186,7 +186,7 @@ select {
 .textfield *:focus,
 .select select:focus {
   border-color: $primary;
-  box-shadow: 0 1px 2px 0 $gray5 inset;
+  box-shadow: 0 1px 2px 0 $gray2 inset;
   outline: none;
 }
 
@@ -289,7 +289,7 @@ Styleguide 3.4
   &::after {
     border-left: 0.6rem solid transparent;
     border-right: 0.6rem solid transparent;
-    border-top: 0.6rem solid $gray3;
+    border-top: 0.6rem solid $gray1;
     bottom: 1.3rem;
     content: '';
     height: 0;
@@ -300,7 +300,7 @@ Styleguide 3.4
   }
 
   option[disabled] {
-    background-color: $gray6;
+    background-color: $gray1;
     color: $gray2;
   }
 }

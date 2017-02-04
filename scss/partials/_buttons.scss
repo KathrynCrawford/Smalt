@@ -51,7 +51,7 @@ Markup:
   }
 
   &:focus {
-    outline: 0.1rem dotted $gray3;
+    outline: 0.1rem dotted $gray2;
   }
 
   &:active {
@@ -70,7 +70,7 @@ Markup:
 }
 
 .btn--secondary {
-  background-color: $gray5;
+  background-color: $gray1;
   color: $gray1;
 
   &:link,
@@ -80,12 +80,12 @@ Markup:
 
   &:focus,
   &:hover {
-    background-color: lighten($gray5, 10%);
+    background-color: lighten($gray1, 10%);
     color: $gray1;
   }
 
   &:active {
-    background-color: darken($gray5, 10%);
+    background-color: darken($gray1, 10%);
   }
 }
 

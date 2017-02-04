@@ -3,21 +3,15 @@
 // Styleguide
 
 // primary colors
-$primary:        #3F3C96 !default;
-$secondary:      #4C243B !default;
+$primary:        #3833ff !default;
+$secondary:      #badff9 !default;
 
 $white:          #FFFBFC !default;
 $black:          #222222 !default;
 
-// dark shades
-$gray3:          #706677 !default;
-$gray1:          darken($gray3, 20%)  !default;
-$gray2:          darken($gray3, 10%) !default;
+$gray1:          #3e3e49 !default;
+$gray2:          #d5d5db !default;
 
-// light shades
-$gray4:          lighten($gray3, 20%) !default;
-$gray5:          lighten($gray3, 35%) !default;
-$gray6:          lighten($gray3, 50%) !default;
 
 $link:           $gray1 !default;
 $link--visited:  darken($link, 10%) !default;
