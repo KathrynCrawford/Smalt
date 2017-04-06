@@ -22,6 +22,7 @@ Markup:
 .sm-center               - centering for elements not children of grids
 .full-width              - styles for full width elements
 .full-height             - styles for full height (of parent container) elements
+.flex-half               - makes child of grid 50% of grid
 
 Styleguide 4.0
 
@@ -87,6 +88,10 @@ Styleguide 4.0
 
 .full-height {
   height: 100%;
+}
+
+.flex-half {
+  flex-basis: 50%;
 }
 
 /*
