@@ -92,6 +92,10 @@ Styleguide 4.0
 
 .flex-half {
   flex-basis: 50%;
+
+  * {
+    max-width: 100%; //prevents an issue with IE11 text overflow
+  }
 }
 
 /*

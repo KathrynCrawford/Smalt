@@ -50,22 +50,23 @@ Styleguide 1.1
 
 // rows
 .grid {
+  display: -webkit-flex;
   display: flex;
 
 // columns
   > * {
     flex: 1 1 auto;
     flex-grow: 4;
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    &:first-child {
-      margin-left: -1rem;
-    }
-
-    &:last-child {
-      margin-right: -1rem;
-    }
+    // padding-left: 1rem;
+    // padding-right: 1rem;
+    //
+    // &:first-child {
+    //   margin-left: -1rem;
+    // }
+    //
+    // &:last-child {
+    //   margin-right: -1rem;
+    // }
 
     &.column--light {
       flex-grow: 2;
@@ -90,6 +91,10 @@ Styleguide 1.1
   }
 }
 
+.grid--wrap {
+  flex-wrap: wrap;
+}
+
 @media (max-width: 599px){
   .grid--medium {
     display: block;
@@ -105,6 +110,10 @@ Styleguide 1.1
       &:last-child {
         margin-right: 0;
       }
+    }
+
+    .flex-half {
+      flex-basis: auto;
     }
   }
 }
@@ -124,6 +133,10 @@ Styleguide 1.1
       &:last-child {
         margin-right: 0;
       }
+    }
+
+    .flex-half {
+      flex-basis: auto;
     }
   }
 }

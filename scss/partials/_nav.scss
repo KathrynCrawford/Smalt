@@ -42,6 +42,7 @@ Markup
 
 .nav {
   background-color: $white;
+  display: -webkit-flex;
   display: flex;
   justify-content: flex-end;
 
