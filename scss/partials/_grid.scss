@@ -57,16 +57,6 @@ Styleguide 1.1
   > * {
     flex: 1 1 auto;
     flex-grow: 4;
-    // padding-left: 1rem;
-    // padding-right: 1rem;
-    //
-    // &:first-child {
-    //   margin-left: -1rem;
-    // }
-    //
-    // &:last-child {
-    //   margin-right: -1rem;
-    // }
 
     &.column--light {
       flex-grow: 2;
@@ -81,14 +71,6 @@ Styleguide 1.1
 .grid--vertical {
   flex-direction: column;
   justify-content: center;
-
-  &:first-child {
-    margin-left: 0;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
 }
 
 .grid--wrap {
@@ -100,8 +82,8 @@ Styleguide 1.1
     display: block;
 
     * {
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: 2rem;
+      padding-right: 2rem;
 
       &:first-child {
         margin-left: 0;
@@ -123,8 +105,8 @@ Styleguide 1.1
     display: block;
 
     * {
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: 2rem;
+      padding-right: 2rem;
 
       &:first-child {
         margin-left: 0;
@@ -160,12 +142,12 @@ Styleguide 1.2
 .wrapper {
   margin: 0 auto;
   max-width: 960px;
-  padding: 4.8rem 2rem;
+  padding: 3.5rem 2rem;
 
   &-large {
     margin: 0 auto;
     max-width: 1200px;
-    padding: 7.2rem 2rem;
+    padding: 4.8rem 2rem;
   }
 
   &-small {
