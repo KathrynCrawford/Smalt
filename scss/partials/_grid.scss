@@ -50,10 +50,8 @@ Styleguide 1.1
 
 // rows
 .grid {
-  align-items: center;
   display: -webkit-flex;
   display: flex;
-  justify-content: center;
 
 // columns
   > * {
