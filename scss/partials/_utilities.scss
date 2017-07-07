@@ -23,6 +23,7 @@ Markup:
 .full-width              - styles for full width elements
 .full-height             - styles for full height (of parent container) elements
 .flex-half               - makes child of grid 50% of grid
+.fluid-img               - makes an image responsive while maintaining aspect ratio
 
 Styleguide 4.0
 
@@ -96,6 +97,11 @@ Styleguide 4.0
   * {
     max-width: 100%; //prevents an issue with IE11 text overflow
   }
+}
+
+.fluid-img {
+  height: auto;
+  max-width: 100%;
 }
 
 /*

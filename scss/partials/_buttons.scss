@@ -25,16 +25,16 @@ Markup:
   width: auto;
 }
 
-@mixin btn-size ($border-radius, $height, $padding) {
+@mixin btn-size ($border-radius, $height, $line-height, $padding) {
   border-radius: $border-radius;
   height: $height;
-  line-height: $height;
+  line-height: $line-height;
   padding: $padding;
 }
 
 .btn {
   @extend %btn;
-  @include btn-size(0.2rem, 4.2rem, 0 3rem);
+  @include btn-size(0.2rem, 4.2rem, 3.8rem, 0 3rem);
   background-color: $primary;
   color: $white;
 
@@ -59,12 +59,12 @@ Markup:
   }
 
   &--small {
-    @include btn-size(0.2rem, 3.3rem, 0 2rem);
+    @include btn-size(0.2rem, 3.3rem, 3rem, 0 2rem);
     font-size: $font-size--small;
   }
 
   &--large {
-    @include btn-size(0.2rem, 5.2rem, 0 4rem);
+    @include btn-size(0.2rem, 5.2rem, 4.8rem, 0 4rem);
     font-size: $font-size--large;
   }
 }
